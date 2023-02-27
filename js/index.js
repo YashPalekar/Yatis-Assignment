@@ -14,12 +14,16 @@ let data = ""; // data for scatterplot
 document.getElementById("fetch-data").addEventListener("click", function () {
   const deviceId = document.getElementById("device-id").value;
   const startDate = new Date(document.getElementById("start-date").value)
-    .toLocaleDateString()
-    .replace("/", "-");
+    .toLocaleDateString("en-IN")
+    .split("/")
+    .reverse()
+    .join("-");
 
   const endDate = new Date(document.getElementById("end-date").value)
-    .toLocaleDateString()
-    .replace("/", "-");
+    .toLocaleDateString("en-IN")
+    .split("/")
+    .reverse()
+    .join("-");
 
   const str = `${api}/?deviceId=${deviceId}&api_access_token=${accessToken}&startDate=${startDate}&endDate=${endDate}`;
 
