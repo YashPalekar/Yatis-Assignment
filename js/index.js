@@ -1,8 +1,7 @@
 // --------------------------------------
 const api = "https://api.yatis.io/api/getBatteryInfo";
 
-const accessToken =
-  "Put Access token here";
+const accessToken = TOKEN;
 
 let data = ""; // data for scatterplot
 
